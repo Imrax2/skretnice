@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatimina kuća sjećanja</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="dust-particles" id="dustParticles" aria-hidden="true"></div>
+
+    <header class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__eyebrow">Interaktivna interpretacija romana Skretnice</p>
+            <h1>Skretnice</h1>
+            <p class="hero__subtitle">Fatimina kuća sjećanja</p>
+            <p class="hero__text">Interaktivno putovanje kroz dom, porodicu, sjećanje i životne prekretnice romana Jasmine Musabegović.</p>
+            <button class="primary-btn" type="button" id="startBtn">Započni istraživanje</button>
+        </div>
+    </header>
+
+    <nav class="tabs-nav" aria-label="Glavni dijelovi stranice">
+        <button class="tab-btn active" type="button" data-tab="kuca" aria-current="page">Kuća sjećanja</button>
+        <button class="tab-btn" type="button" data-tab="likovi">Likovi</button>
+        <button class="tab-btn" type="button" data-tab="interpretacija">Interpretacija lektire</button>
+        <button class="tab-btn" type="button" data-tab="oromanu">O romanu</button>
+    </nav>
+
+    <main class="site-main" id="glavni-dio">
+        <section class="tab-content active" id="tab-kuca" data-bg="assets/images/hodnik.png">
+            <div class="section-shell">
+                <div class="section-header">
+                    <p class="section-kicker">Fatimina kuća sjećanja</p>
+                    <h2>Kuća sjećanja</h2>
+                    <p>U ovoj kući svaki predmet čuva jedan trag Fatiminog/Timkinog života. Klikni na predmete i otkrij kako dom, djeca, željeznica i sjećanje oblikuju značenje romana.</p>
+                </div>
+
+                <div class="progress-panel" aria-live="polite">
+                    <div class="progress-text">
+                        <span>Istraženo: <strong id="exploredCount">0</strong>/<strong id="totalCount">18</strong> tragova</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-track" aria-hidden="true">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <button class="secondary-btn" type="button" id="resetBtn">Resetuj istraživanje</button>
+                </div>
+
+                <div class="room-nav" id="roomNav" aria-label="Izbor soba"></div>
+
+                <article class="memory-room" id="memoryRoom">
+                    <div class="room-copy">
+                        <p class="room-label">Soba</p>
+                        <h3 id="roomTitle"></h3>
+                        <p id="roomIntro"></p>
+                    </div>
+                    <div class="hotspot-layer" id="hotspotLayer"></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="tab-content image-section" id="tab-likovi" style="--section-image: url('assets/images/likovi.png')">
+            <div class="section-shell">
+                <div class="section-header">
+                    <p class="section-kicker">Arhivski dosjei</p>
+                    <h2>Likovi</h2>
+                    <p>Likovi u romanu Skretnice nisu prikazani samo kroz vanjsku radnju, nego kroz porodične odnose, šutnju, brigu i historijske okolnosti.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="archive-card">
+                        <span class="card-label">Glavna junakinja</span>
+                        <h3>Fatima/Timka</h3>
+                        <p>Fatima/Timka je centralni lik romana. Ona je majka, supruga i žena čiji se život oblikuje kroz porodicu, dom i historijske okolnosti. Kroz njen lik prikazuje se položaj žene u patrijarhalnom društvu. Njena snaga nije glasna, nego tiha: vidi se kroz brigu za djecu, izdržljivost, šutnju i sjećanje.</p>
+                    </article>
+                    <article class="archive-card">
+                        <span class="card-label">Fatimin/Timkin muž</span>
+                        <h3>Nezir</h3>
+                        <p>Nezir je povezan sa željeznicom, što dodatno povezuje njegov lik s naslovom romana. Kroz odnos s Fatimom/Timkom prikazuju se patrijarhalni odnosi, porodična odgovornost i težina života u vremenu historijskih promjena.</p>
+                    </article>
+                    <article class="archive-card">
+                        <span class="card-label">Središte Fatiminog/Timkinog života</span>
+                        <h3>Djeca</h3>
+                        <p>Djeca su razlog njene borbe, brige i izdržljivosti. Kroz njih se prikazuju majčinstvo, odgovornost, nada i strah za budućnost. Ona nisu samo sporedni motiv, nego jedan od temelja značenja romana.</p>
+                    </article>
+                    <article class="archive-card">
+                        <span class="card-label">Porodična bliskost</span>
+                        <h3>Bećir / Beča</h3>
+                        <p>Bećir, odnosno Beča, važan je zbog načina na koji se u romanu prikazuje porodično imenovanje i bliskost. Nadimak pokazuje intimni prostor porodice i način na koji Fatima/Timka doživljava svoje bližnje.</p>
+                    </article>
+                    <article class="archive-card">
+                        <span class="card-label">Prostor ljubavi, obaveze i opstanka</span>
+                        <h3>Porodica</h3>
+                        <p>Porodica u romanu nije samo pozadina radnje. Ona je prostor ljubavi, brige, pritiska, obaveze i opstanka. Kroz porodicu se najbolje vidi Fatimina/Timkina uloga majke i čuvarice doma.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-content image-section" id="tab-interpretacija" style="--section-image: url('assets/images/interpretacija.png')">
+            <div class="section-shell narrow">
+                <div class="section-header">
+                    <p class="section-kicker">Tumačenje motiva</p>
+                    <h2>Interpretacija lektire</h2>
+                    <p>Ova interaktivna stranica prikazuje roman Skretnice kroz prostor Fatimine/Timkine kuće. Svaka soba i svaki predmet imaju simbolično značenje: kuhinja predstavlja svakodnevnu borbu i majčinstvo, dječija soba porodičnu bliskost, hodnik odlazak i nesigurnost, pogled prema željeznici životne prekretnice, a arhiva sjećanja tragove prošlosti. Na taj način stranica ne prepričava samo radnju, nego tumači glavne motive romana.</p>
+                </div>
+
+                <h3 class="content-title">Citati kao dokaz</h3>
+
+                <div class="quote-block">
+                    <div class="quote-card">
+                        <span>Citat iz djela</span>
+                        <blockquote>“U roditeljskoj je kući rodila kćerku, pa opet sina, i sada kćerku, koja se tek dočepala nogu. Znala je da će tako naizmjenično biti i kasnije, ako bude rađala; muško pa žensko.”</blockquote>
+                    </div>
+                    <div class="explanation-card">
+                        <h4>Tumačenje citata 1</h4>
+                        <p>Ovaj citat pokazuje koliko je Fatimin/Timkin život povezan s majčinstvom i porodicom. Djeca se ne pojavljuju samo kao sporedni likovi, nego kao središte njenog života. Kroz rađanje, brigu i svakodnevicu roman prikazuje ženu u prostoru doma, ali i pritisak očekivanja koja društvo stavlja pred nju.</p>
+                    </div>
+                </div>
+
+                <div class="quote-block">
+                    <div class="quote-card">
+                        <span>Citat iz djela</span>
+                        <blockquote>“Ovo troje je zvala djecom, a Bećir je ostao Beča, i ponekad ‘matori’.”</blockquote>
+                    </div>
+                    <div class="explanation-card">
+                        <h4>Tumačenje citata 2</h4>
+                        <p>Ovaj citat otkriva intimnost porodičnog prostora. Način na koji Fatima/Timka imenuje djecu pokazuje bliskost, nježnost i posebne odnose unutar porodice. Nadimak Beča pokazuje da porodica nije prikazana samo kao obaveza, nego i kao prostor emocije, navike i pripadnosti.</p>
+                    </div>
+                </div>
+
+                <div class="conclusion-card">
+                    <h3>Zaključak interpretacije</h3>
+                    <p>Kroz ova dva citata vidi se zašto su djeca i porodica ključni motivi romana. Fatimina/Timkina snaga ne prikazuje se kroz velike govore ili vanjske pobjede, nego kroz svakodnevnu brigu, šutnju, rađanje, pamćenje i čuvanje porodice. Zato ova stranica koristi kuću kao glavni simbol: dom je mjesto gdje se historija, patrijarhalni odnosi i unutrašnji život žene susreću.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-content image-section" id="tab-oromanu" style="--section-image: url('assets/images/o-romanu.png'), url('assets/images/interpretacija.png')">
+            <div class="section-shell">
+                <div class="section-header">
+                    <p class="section-kicker">O djelu</p>
+                    <h2>Skretnice — Jasmina Musabegović</h2>
+                    <p>Skretnice je roman Jasmine Musabegović koji kroz lik Fatime/Timke prikazuje položaj žene, majčinstvo, porodicu, patrijarhalne odnose, historijske okolnosti, sjećanje i životne prekretnice. Naslov upućuje na željezničke skretnice, ali i na promjene pravca u ljudskom životu.</p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card"><span>Autorica</span><strong>Jasmina Musabegović</strong></div>
+                    <div class="info-card"><span>Vrsta djela</span><strong>roman</strong></div>
+                    <div class="info-card"><span>Glavni lik</span><strong>Fatima/Timka</strong></div>
+                    <div class="info-card"><span>Važni motivi</span><strong>djeca, dom, majčinstvo, šutnja, željeznica, sjećanje</strong></div>
+                    <div class="info-card wide"><span>Glavna ideja</span><strong>historija se prikazuje kroz unutrašnji život žene i porodice</strong></div>
+                </div>
+
+                <article class="text-panel">
+                    <h3>Kratki sadržaj</h3>
+                    <p>Roman prati Fatimu/Timku, ženu čiji se život odvija kroz porodicu, dom i historijske promjene. Njena svakodnevnica obilježena je majčinstvom, odnosom s Nezirom, brigom za djecu, šutnjom i sjećanjem. Kroz njen život roman pokazuje kako velike historijske okolnosti mijenjaju obične ljude i njihove porodice.</p>
+                </article>
+
+                <div class="author-grid">
+                    <article class="archive-card">
+                        <span class="card-label">Biografija</span>
+                        <h3>O autorici</h3>
+                        <p>Jasmina Musabegović, rođena Alić, bila je bosanskohercegovačka i bošnjačka književnica, romansijerka, esejistkinja, književna kritičarka, urednica i prevoditeljica s francuskog jezika. Rođena je 1941. godine u Vogošći, a veliki dio djetinjstva provela je u Mostaru. U Sarajevu je završila klasičnu gimnaziju i studij južnoslavenskih književnosti i francuskog jezika.</p>
+                        <p>Njen književni rad posebno je važan jer u središte stavlja ženski glas, porodično iskustvo, sjećanje, historiju i unutrašnji svijet žene. U svojim romanima ne prikazuje historiju samo kroz velike događaje, nego kroz svakodnevni život, porodicu, majčinstvo i sudbinu pojedinca.</p>
+                        <p>Pisala je romane, eseje i književne kritike, a bavila se i prevođenjem. Među njenim poznatim djelima izdvajaju se <em>Snopis</em>, <em>Skretnice</em>, <em>Most</em> i <em>Žene</em>. Roman <em>Skretnice</em> smatra se jednim od njenih najpoznatijih djela.</p>
+                    </article>
+                    <article class="archive-card">
+                        <span class="card-label">Veza s romanom</span>
+                        <h3>Povezanost autorice i romana</h3>
+                        <p>Roman Skretnice povezan je s književnim interesima Jasmine Musabegović jer u prvi plan stavlja ženu, porodicu i historijske okolnosti koje oblikuju privatni život. Kroz Fatimu/Timku autorica prikazuje kako rat, patrijarhalni odnosi i društvene promjene djeluju na unutrašnji svijet žene.</p>
+                        <p>Važna je i simbolika željeznice. U romanu željeznica i skretnice postaju simbol odlaska, čekanja, selidbi i životnih prekretnica. Na taj način autorica povezuje prostor doma s većim historijskim okolnostima.</p>
+                        <p>Zbog toga se roman može razumjeti kao književni prostor u kojem se povezuju lično, porodično i historijsko iskustvo. Fatimina/Timkina kuća, djeca, šutnja i sjećanje nisu samo elementi radnje, nego način da se prikaže kako velika historija ulazi u svakodnevni život obične žene.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="popup" id="discoveryModal" aria-hidden="true">
+        <div class="popup__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="popup__close" type="button" id="modalClose" aria-label="Zatvori karticu">×</button>
+            <p class="popup__label">Otkriven trag</p>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <div class="completion-message" id="completionMessage" aria-hidden="true">
+        <div class="completion-card" role="dialog" aria-modal="true">
+            <h3>Kuća je istražena</h3>
+            <p>Otkrio/la si sve tragove Fatimine kuće sjećanja. Sada možeš otvoriti tab Interpretacija lektire i povezati simbole s citatima iz djela.</p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Interaktivna interpretacija lektire Skretnice — Jasmina Musabegović</p>
+        <p>Stranica koristi samo navedene citate iz djela. Ostali tekst je interpretacija motiva romana.</p>
+    </footer>
+</body>
+</html>
